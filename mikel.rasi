@@ -1,0 +1,64 @@
+* {
+	bg: #1c1c1c;
+	hv: #005577;
+	txt: #fff;
+
+	background-color: @bg;
+	dark: @bg;
+	text-color: @txt;
+	border: 0px;
+}
+
+configuration {
+	show-icons: true;
+	font: "JetBrainsMono Nerd Font 9";
+	terminal: "alacritty";
+}
+
+window {
+	width: 100%;
+	location: Northwest;
+	children: [mainbox];
+}
+
+mainbox {
+	children: [ inputbar, message, listview ];
+}
+
+message {
+	padding: 5px;
+}
+
+inputbar {
+	color: @txt;
+}
+
+entry, prompt, case-indicator {
+}
+prompt {
+	enabled: false;
+}
+
+listview {
+	lines: 20;
+}
+
+entry {
+}
+
+element {
+	padding: 0px;
+}
+
+element-text {
+	background-color: inherit;
+	text-color: inherit;
+}
+
+element selected.normal {
+	background-color: @hv;
+}
+
+element normal active {
+	background-color: @hv;
+}
